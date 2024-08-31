@@ -24,6 +24,7 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/amr_encoder.cpp \
 				$(LOCAL_PATH)/wrapper.cpp
 
 LOCAL_C_INCLUDES := $(PV_INCLUDES)
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
 
 
 LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog
